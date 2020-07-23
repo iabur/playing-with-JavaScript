@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>game</title>
+</head>
+<body>
+
+	<p><input type="text" id="getinput" name=""></p>
+	<p><button id="button">check</button></p>
+
+	<script type="text/javascript">
+		document.getElementById("button").onclick = function() {
+			var age = document.getElementById("getinput").value;
+			var ran = Math.floor(Math.random()*6);
+			if(age == ran) {
+				alert("Yes")
+			}
+			else {
+				alert("Wrong! The number was "+ran);
+			}
+			
+		}
+	</script>
+
+</body>
+</html>
