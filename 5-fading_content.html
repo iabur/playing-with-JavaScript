@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>changing a website</title>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style type="text/css">
+      #circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 10px;
+        background-color: green;
+      }
+      .square {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <script type="text/javascript">
+      // $('div').click(function () {
+      //   $(this).hide();
+      // });
+
+      $('div').click(function () {
+        $(this).fadeOut('slow', function () {
+          alert('You done it!');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>changing a website</title>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style type="text/css">
+      #circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 10px;
+        background-color: green;
+      }
+      .square {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <script type="text/javascript">
+      // $('#circle').click(function () {
+      //   $('#circle').css('width', '400px');
+      //   alert($('body').css('width'));
+      // });
+
+      // $('#circle').click(function () {
+      //   $('#circle').css('background-color', 'red');
+      // });
+
+      // $('div').click(function () {
+      //   $(this).css('display', 'none');
+      // });
+
+      $('div').click(function () {
+        if ($(this).attr('id') == 'circle') {
+          alert('Yor clicked a ' + $(this).attr('id'));
+        } else {
+          alert('you clicked a square');
+        }
+      });
+    </script>
+  </body>
+</html>

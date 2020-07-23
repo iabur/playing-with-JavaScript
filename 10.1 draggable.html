@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX</title>
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <style type="text/css">
+      .circle {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+      }
+      #color1 {
+        background-color: green;
+      }
+      #color2 {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <div class="circle" id="color1"></div>
+    <div class="circle" id="color2"></div>
+    <div style="background-color: yellow; height: 300px; width: 300px;">
+      <span>I am stuck in it</span>
+    </div>
+    <script type="text/javascript">
+      $('#color1').draggable({ axis: 'y' });
+      $('#color2').draggable({ axis: 'x' });
+      $('span').draggable({ containment: 'parent' });
+    </script>
+  </body>
+</html>

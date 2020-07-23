@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>changing a website</title>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style type="text/css">
+      #text {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">this is some text</p>
+    <button id="toggle">toggle</button>
+    <script type="text/javascript">
+      // $('#fadeOut').click(function () {
+      //   $('p').fadeOut('slow');
+      // });
+
+      // $('#fade').click(function () {
+      //   if ($('#text').css('display') == 'none') $('#text').fadeIn();
+      //   else $('#text').fadeOut();
+      // });
+      var check = false;
+      $('#toggle').click(function () {
+        if (check) {
+          $('#text').fadeOut(function () {
+            check = false;
+          });
+        } else {
+          $('#text').fadeIn(function () {
+            check = true;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

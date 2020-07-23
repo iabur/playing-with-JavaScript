@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX</title>
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <style type="text/css">
+      .circle {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+      }
+      #color1 {
+        background-color: green;
+      }
+      #color2 {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <div class="circle" id="color1"></div>
+    <div class="circle" id="color2"></div>
+    <div
+      id="also"
+      style="background-color: yellow; height: 300px; width: 300px;"
+    >
+      <span>I am stuck in it</span>
+    </div>
+    <script type="text/javascript">
+      $('#color1').resizable();
+      $('#color2').resizable({
+        grid: 50,
+        alsoResize: '#also',
+        resize: function (event, ui) {
+          //   alert('Resizing');
+          //   if ($('#color2').css('width') > '500px') {
+          //     alert('Stop');
+          //   }
+          if ($('#color2').width() > 500) {
+            alert('Stop');
+          }
+        },
+      });
+      $('#also').resizable();
+    </script>
+  </body>
+</html>

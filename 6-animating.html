@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>animating</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style type="text/css">
+      #circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circle"></div>
+    <script type="text/javascript">
+      $('#circle').click(function () {
+        $(this).animate(
+          {
+            width: '400px',
+            height: '400px',
+            marginTop: '100px',
+            marginLeft: '100px',
+          },
+          function () {
+            $(this).css('background-color', 'blue');
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
