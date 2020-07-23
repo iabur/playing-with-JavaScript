@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrow function</title>
+  </head>
+  <body>
+    <script>
+      // this is general function
+      function generalFunction() {
+        let value = 'this is general function';
+        console.log('generalFunction -> value', value);
+      }
+      generalFunction();
+      // this is arrow function
+      var arrowFunction = () => {
+        let value = 'this is arrowFunction';
+        console.log('arrowFunction -> value', value);
+      };
+      arrowFunction();
+      //parameter function
+      var para = (height, weight) => {
+        return height + weight;
+      };
+      console.log('para -> para', para(5, 6));
+
+      //   one line function
+      var anotherWay = (height, weight) => height + weight;
+      console.log('anotherWay', anotherWay(3, 4));
+    </script>
+  </body>
+</html>

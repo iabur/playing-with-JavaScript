@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>super dot</title>
+  </head>
+  <body>
+    <script>
+      function deposite(...money) {
+        let balance = 0;
+        for (let i = 0; i < money.length; i++) {
+          balance += money[i];
+        }
+        return balance;
+      }
+
+      console.log(deposite(20, 30));
+      let addMoney = [10, 20, 30];
+      console.log(...addMoney);
+      console.log(Math.max(...addMoney));
+    </script>
+  </body>
+</html>

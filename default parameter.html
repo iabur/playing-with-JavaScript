@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>default parameter</title>
+  </head>
+  <body>
+    <script>
+      var getData = (temp, cold = 10) => {
+        if (temp < cold) {
+          console.log('This is so cold');
+        } else {
+          console.log('This is not so cold');
+        }
+      };
+      // always set first argument in first parameter and second argument in second argument
+      getData(1, 0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dynamic object creation</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        name: 'iabur',
+        val: 100,
+      };
+      console.log(obj.name);
+
+      // when define the object value previously
+      // when wrap a value
+      // when declare a function in obj scope
+      let score = 500;
+      let wrap = 'sky';
+      let myObj = {
+        score,
+        sky: 'blue',
+        newFunc() {
+          console.log('This is new function');
+        },
+      };
+      console.log(myObj.score);
+      console.log(myObj[wrap]);
+      myObj.newFunc();
+    </script>
+  </body>
+</html>
