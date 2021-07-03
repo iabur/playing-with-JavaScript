@@ -20,6 +20,8 @@
     talk() { }
   };
 
-  var accessName = person.name;
-  console.log(accessName);
+  const accessName = person.talk();
+  const newName = 'name';
+  person[newName] = 'Iabur';
+  console.log(person.name);
 </script>
